@@ -18,8 +18,23 @@
   height: 30%;
   margin: 0 auto;
   margin-top: 10rem;
+  padding: 0 2rem;
 }
 
-.pd-l {
-  padding-left: 0.5rem;
+.margin-1 {
+  margin: 1rem 0;
+}
+
+#text-area {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  resize: none;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
 }
