@@ -1,0 +1,20 @@
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.colum-half {
+  flex-basis: 50%;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.center {
+  justify-content: center;
+}
