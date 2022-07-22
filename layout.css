@@ -1,5 +1,13 @@
+.hidden {
+  display: none;
+}
+
 .row {
   display: flex;
+}
+
+.flex-wrap {
+  flex-direction: wrap;
 }
 
 .column-full {
