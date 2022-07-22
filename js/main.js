@@ -14,13 +14,15 @@ function clickSubmit(event) {
   if (event.target.tagName === 'BUTTON') {
     $modalContainer.classList.add('hidden');
     var entry = {
-      time: '1',
+      time: $submitForm['time-select'].value,
       entryId: 1,
-      description: ''
+      description: $submitForm.description.value
     };
-    var day = $submitForm.elements['day-select'].value;
+    var day = $submitForm['day-select'].value;
     data.entries[day].push(entry);
+    data.nextEntryId++;
   }
+  // console.log(entry);
 }
 
 $addEntryButton.addEventListener('click', clickEntry);

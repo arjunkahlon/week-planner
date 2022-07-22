@@ -18,6 +18,10 @@
   flex-basis: 50%;
 }
 
+.column-80 {
+  flex-basis: 80%;
+}
+
 .container {
   max-width: 90%;
   margin: auto;

@@ -39,3 +39,17 @@
 .hidden {
   display: none;
 }
+
+tbody tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+table {
+  width: 100%;
+  border: solid black 0.1rem;
+  text-align: left;
+}
+
+thead {
+  background-color: darkgray;
+}
