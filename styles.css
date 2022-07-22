@@ -15,10 +15,11 @@
 
 .modal {
   width: 40%;
-  height: 30%;
+  height: auto;
   margin: 0 auto;
   margin-top: 10rem;
   padding: 0 2rem;
+  padding-bottom: 1rem;
 }
 
 .margin-1 {
