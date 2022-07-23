@@ -5,7 +5,7 @@ var $addEntryButton = document.querySelector('#entry-button');
 var $modalContainer = document.querySelector('.modal-container');
 var $submitForm = document.querySelector('form');
 var $dayWrapper = document.querySelector('#day-wrapper');
-console.log($dayWrapper);
+// console.log($dayWrapper);
 function clickEntry(event) {
   $modalContainer.classList.remove('hidden');
 }
@@ -26,12 +26,34 @@ function clickSubmit(event) {
   // console.log(entry);
 }
 
-function clickDay(event){
-  if(event.target.tagName === 'BUTTON'){
-    var eventDay = event.target.value;
-    console.log(eventDay);
-    console.log(data.entries[eventDay]);
+function clickDay(event) {
+  if (event.target.tagName === 'BUTTON') {
+    var eventDay = event.target.getAttribute('data-day');
+    var renderDay = data.entries[eventDay];
+    var $initBody = document.querySelector('#initial-body');
+    // console.log($initBody);
+    var replacementBody = renderTable(renderDay);
+    $initBody.replaceWith(replacementBody);
+    renderTable(renderDay);
+    // console.log(eventDay);
+    // console.log(data.entries[eventDay]);
   }
+}
+
+function renderTable(renderDay) {
+  var renderTableBody = document.createElement('tbody');
+  for (let i = 0; i < renderDay.length; i++) {
+    var tableRow = document.createElement('tr');
+    renderTableBody.appendChild(tableRow);
+    var timeTd = document.createElement('td');
+    timeTd.textContent = renderDay[i].time;
+    var descTd = document.createElement('td');
+    descTd.textContent = renderDay[i].description;
+    tableRow.appendChild(timeTd);
+    tableRow.appendChild(descTd);
+  }
+  renderTableBody.setAttribute('id', 'initial-body');
+  return renderTableBody;
 }
 
 $dayWrapper.addEventListener('click', clickDay);

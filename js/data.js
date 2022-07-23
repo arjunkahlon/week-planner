@@ -15,11 +15,11 @@ var data = {
 };
 
 var previousEntries = localStorage.getItem('weekly-entries-local');
-if(previousEntries !== null){
+if (previousEntries !== null) {
   data = JSON.parse(previousEntries);
 }
 
-function storeEntries(){
+function storeEntries() {
   var saveEntries = JSON.stringify(data);
   localStorage.setItem('weekly-entries-local', saveEntries);
 }
