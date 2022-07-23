@@ -46,7 +46,7 @@ function renderTable(renderDay) {
     var tableRow = document.createElement('tr');
     renderTableBody.appendChild(tableRow);
     var timeTd = document.createElement('td');
-    timeTd.textContent = renderDay[i].time;
+    timeTd.textContent = renderDay[i].time + ':00';
     var descTd = document.createElement('td');
     descTd.textContent = renderDay[i].description;
     tableRow.appendChild(timeTd);
