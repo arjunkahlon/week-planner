@@ -53,3 +53,8 @@ table {
 thead {
   background-color: darkgray;
 }
+
+#add-entry-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
